@@ -1,0 +1,55 @@
+class Member {
+    String name;
+    int age;
+    String phoneNumber;
+    String address;
+    double salary;
+    
+    public Member(String name, int age, String phoneNumber, String address, double salary) {
+        this.name = name;
+        this.age = age;
+        this.phoneNumber = phoneNumber;
+        this.address = address;
+        this.salary = salary;
+    }
+    
+    public void printSalary() {
+        System.out.println(name + "'s salary is " + salary);
+    }
+}
+
+class Employee extends Member {
+    String specialization;
+    
+    public Employee(String name, int age, String phoneNumber, String address, double salary, String specialization) {
+        super(name, age, phoneNumber, address, salary);
+        this.specialization = specialization;
+    }
+}
+
+class Manager extends Member {
+    String department;
+    
+    public Manager(String name, int age, String phoneNumber, String address, double salary, String department) {
+        super(name, age, phoneNumber, address, salary);
+        this.department = department;
+    }
+}
+
+class main
+ {
+    public static void main(String[] args) 
+	{
+        Employee employee = new Employee("John", 30, "1234567890", "123 Main St", 50000, "Software Development");
+        Manager manager = new Manager("Jane", 35, "9876543210", "456 Elm St", 80000, "Marketing");
+        
+        System.out.println(employee.name + " (" + employee.specialization + ") - " + employee.age + " years old");
+        System.out.println("Phone: " + employee.phoneNumber + ", Address: " + employee.address);
+        employee.printSalary();
+        
+        System.out.println(manager.name + " (" + manager.department + " Manager) - " + manager.age + " years old");
+        System.out.println("Phone: " + manager.phoneNumber + ", Address: " + manager.address);
+        manager.printSalary();
+	}
+ }
+ 
