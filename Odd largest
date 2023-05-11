@@ -1,0 +1,24 @@
+import java.util.*;
+class three_digit_largest
+{
+public static void main(String[]args)
+{
+Scanner myobj=new Scanner(System.in);
+int num=myobj.nextInt();
+String str=Integer.toString(num);
+int s=0,max=0;
+for(int i=0;i<str.length();i++)
+{
+s=num%1000;
+if(s>max)
+{
+max=s;
+}
+else
+{
+num=num/10;
+}
+}
+System.out.print(max);
+}
+}
