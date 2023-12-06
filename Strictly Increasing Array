@@ -1,0 +1,22 @@
+import java.io.*;
+import java.util.*;
+public class StrictlyIncreasingArray {
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 5};
+
+        if (isStrictlyIncreasing(array)) {
+            System.out.println("Array is strictly increasing.");
+        } else {
+            System.out.println("Array is not strictly increasing.");
+        }
+    }
+
+    private static boolean isStrictlyIncreasing(int[] arr) {
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] <= arr[i - 1]) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
