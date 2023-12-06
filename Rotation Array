@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+public class Rotation_clock_anticlock 
+{
+    public static void main(String args[])
+
+    {
+    Scanner s=new Scanner(System.in);
+
+    System.out.println("enter string 1");
+    String a=s.nextLine();
+    
+    System.out.println("enter string 2");
+    String b=s.nextLine();
+
+     System.out.println("again enter string 2");
+    String c=s.nextLine();
+
+int len=a.length();
+
+    String anticlk="";
+    String clk="";
+
+    System.out.println("enter the no of places ");
+int nnn=s.nextInt();
+
+anticlk=a.substring(nnn,len)+a.substring(0,nnn);
+
+clk=a.substring(len-nnn,len)+a.substring(0,len-nnn);
+
+
+if(anticlk.equals(b))
+{
+    System.out.println("Yes");
+}
+else
+{
+    System.out.println("No");
+}
+
+if(clk.equals(c))
+{
+    System.out.println("Yes");
+}
+else
+{
+    System.out.println("No");
+}
+
+
+}
+}
